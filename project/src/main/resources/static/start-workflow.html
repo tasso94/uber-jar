@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Start Workflow</title>
+
+  <style type="text/css">
+    body {
+      zoom: 5;
+    }
+    img {
+      width: 30%;
+    }
+  </style>
+
+  <script type="text/javascript">
+
+    function startProcessInstance() {
+
+      var processDefinitionKey = document.getElementById('processDefinitionKey').value;
+      fetch('http://localhost:8080/rest/process-definition/key/' + processDefinitionKey + '/start', {
+        method: 'post',
+        headers: {
+          "Content-Type": 'application/json'
+        },
+        body: JSON.stringify({
+          variables: {
+            myVariable: {
+              value: document.getElementById('myVariable').value,
+              type: "String"
+            }
+          }
+        })
+      }).then(response => {
+        response.json()
+          .then(json => alert(json.message ? json.message : "Success!"));
+      });
+
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <form action="javascript:startProcessInstance();">
+
+    <input id="processDefinitionKey"
+           type="text"
+           placeholder="Process Definition Key" /> <br />
+
+    <input id="myVariable"
+           type="text"
+           placeholder="myVariable" /> <br />
+
+    <input type="submit"
+           value="Start"/>
+
+  </form>
+
+</body>
+
+</html>
