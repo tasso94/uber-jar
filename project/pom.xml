@@ -28,25 +28,6 @@
       <artifactId>postgresql</artifactId>
     </dependency>
 
-    <!-- Spring Boot Web -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
-    <!-- Web Applications -->
-    <dependency>
-      <groupId>org.camunda.bpm.springboot</groupId>
-      <artifactId>camunda-bpm-spring-boot-starter-webapp</artifactId>
-      <version>3.3.4</version>
-    </dependency>
-
-    <!-- Spring Security -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-
   </dependencies>
 
   <build>
