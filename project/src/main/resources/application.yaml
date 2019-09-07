@@ -7,3 +7,7 @@ spring.datasource:
 camunda.bpm.admin-user:
   id:       CaptainJack
   password: SecretPrey
+
+spring.security.user:
+  name:     CaptainJack
+  password: SecretPrey
