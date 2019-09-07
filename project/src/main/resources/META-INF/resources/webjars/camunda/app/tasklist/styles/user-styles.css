@@ -1,0 +1,19 @@
+/* replaces the logo with a cat */
+.navbar-brand {
+  text-indent: -999em;
+  background-image: url(http://localhost:8080/cat.gif);
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  width: 185px;
+}
+
+/* changes some colors */
+[cam-widget-header] {
+  border-top: 3px solid blue;
+}
+
+.btn-primary {
+  background-color: blue;
+  border-color: blue;
+}
